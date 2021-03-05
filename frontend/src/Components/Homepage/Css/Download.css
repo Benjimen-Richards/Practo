@@ -1,0 +1,90 @@
+.Download_container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 400px;
+  flex-wrap: wrap;
+  background-color: #f8f8fb;
+  margin-top: 10px;
+}
+.dnd_image img {
+  width: 300px;
+  height: 350px;
+}
+.dnd_text {
+  width: 30%;
+}
+.dnd_text span {
+  font-size: 25px;
+  font-weight: 500;
+}
+.dnd_text h5 {
+  font-size: 12px;
+}
+.dnd_text h6 {
+  margin-top: 30px;
+}
+.number_container {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-left: -10px; */
+  flex-wrap: wrap;
+}
+.number_para {
+  display: flex;
+  margin-left: 0%;
+  border: 1px solid rgb(156, 154, 154);
+  height: 45px;
+  border-radius: 10px;
+  padding: 2px;
+}
+.number_para p {
+  height: 40px;
+  width: 3rem;
+  background-color: white;
+  padding: 8px;
+  border-right: 1px solid rgb(156, 154, 154);
+}
+.number_para input {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 12rem;
+  padding: 1px 2px 1px 10px;
+}
+.number_container button {
+  width: 150px;
+  height: 50px;
+  background-color: #14bef0;
+  margin-left: 10px;
+  height: 40px;
+  font-size: 12px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+@media all and (max-width: 600px) {
+  .Download_container {
+    margin-top: 20px;
+    height: max-content;
+    padding: 20px;
+  }
+  .dnd_text {
+    text-align: center;
+    width: 100%;
+    /* border: 1px solid black; */
+    height: max-content;
+  }
+
+  .number_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+  }
+  .number_container button {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,232 @@
+.doctor_img img {
+  max-width: 1550px;
+  width: 100%;
+  height: 310px;
+}
+.find_container {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 1300px;
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  /* border: 1px solid black; */
+}
+.find_container img {
+  width: 50%;
+  height: 300px;
+  margin-right: 8%;
+}
+.covid_container {
+  border: 1px solid black;
+  max-width: 1550px;
+  width: 100%;
+  min-height: 550px;
+  background-color: #28328c;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.covid_container span {
+  color: #ffffff;
+  font-size: 24px;
+  margin: 0 0 16px;
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.covid_img_container {
+  display: flex;
+  padding-top: 10px;
+}
+.covid_img_container img {
+  width: 30%;
+  height: 500px;
+  margin-right: 50px;
+}
+.specialities_container_img {
+  display: flex;
+  width: 100%;
+  height: max-content;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* border: 1px solid black; */
+  margin-top: 10px;
+}
+.specialities_container_img img {
+  width: 10rem;
+  height: 10rem;
+}
+.specialities_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: max-content;
+  padding-left: 60px;
+  padding-right: 60px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.specialities_container_span span {
+  font-size: 24px;
+  font-weight: 500;
+}
+.specialities_container_span {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+.specialities_container_text h4 {
+  font-weight: 400;
+  margin-top: 5px;
+}
+.specialities_container_span button {
+  color: #14bef6;
+  border: 1px solid #14bef6;
+  font-size: 14px;
+  padding: 12px 0px 16px;
+  background-color: transparent;
+  width: 156px;
+  height: 45px;
+}
+.appointment_container_img {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  flex-wrap: wrap;
+  height: max-content;
+  width: 100%;
+}
+.read_container {
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 70px;
+  padding-right: 70px;
+  min-height: 400px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.read_text {
+  width: 360px;
+  height: 230px;
+  /* border: 1px solid black; */
+  padding-top: 5%;
+  padding-left: 3%;
+}
+.read_text span {
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 0%;
+}
+.read_text h5 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+}
+.read_container button {
+  background-color: #14bef0;
+  margin: 30px 0 0;
+  padding: 15px 30px;
+  border: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.read_img {
+  display: flex;
+  justify-content: space-between;
+}
+@media all and (max-width: 600px) {
+  .doctor_img img {
+    width: 100%;
+    height: 250px;
+  }
+  .read_container {
+    padding: 0%;
+  }
+  .read_img {
+    display: flex;
+    flex-direction: column;
+  }
+  .find_container {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
+  .find_container img {
+    width: 100%;
+    height: 200px;
+  }
+  .covid_container {
+    border: 1px solid black;
+    width: 100%;
+    height: max-content;
+    background-color: #28328c;
+    display: flex;
+    flex-direction: column;
+  }
+  .covid_container span {
+    color: #ffffff;
+    font-size: 20px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .covid_img_container {
+    display: flex;
+    flex-direction: column;
+  }
+  .covid_img_container img {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 50px;
+  }
+  .specialities_container_img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 15%;
+  }
+  .specialities_container_img img {
+    width: 14rem;
+    height: 14rem;
+    padding-bottom: 20%;
+  }
+  .specialities_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 0%;
+  }
+  .specialities_container_span span {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .specialities_container_span {
+    display: flex;
+    flex-direction: column;
+  }
+  .specialities_container_text h4 {
+    font-size: 15px;
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  .specialities_container_span button {
+    color: #14bef6;
+    border: 1px solid #14bef6;
+    font-size: 12px;
+    padding-bottom: 10px;
+    background-color: transparent;
+    width: 100%;
+    height: max-content;
+  }
+}

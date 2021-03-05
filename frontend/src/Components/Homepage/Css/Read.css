@@ -1,0 +1,6 @@
+@media all and (max-width: 1120px) {
+  .read_text {
+    width: 100%;
+    text-align: center;
+  }
+}
