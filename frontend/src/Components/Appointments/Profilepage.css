@@ -1,0 +1,145 @@
+.Profile_img
+{
+    /* border: 1px solid black; */
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Profile_img img
+{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.Profile_container
+{
+    width: 100%;
+}
+.Profile_box
+{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+}
+.file_upload
+{
+    display: none;
+    color: transparent;
+    margin-top: 20px;
+    /* background-color: blueviolet; */
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.editbutton
+{
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    justify-content:flex-end;   
+}
+.editbutton button
+{
+    color: white;
+    background-color: #14bef0;
+    height: 40px;
+    width: 180px;
+    border: 1px solid grey;
+    border: none;
+    border-radius: 10px;
+    margin-right: 10%;
+}
+.Profile_inputs
+{
+    /* border: 1px solid black; */
+    padding-top: 20px;
+    display: flex;
+    width: 50%;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.profile_name_input 
+{
+ /* border: 1px solid black; */
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: space-evenly;
+ flex-direction: column;
+ margin:10px;
+}
+.profile_name_input input
+{
+    width: 100%;
+    padding: 10px;
+}
+#leave
+{
+     display: flex;
+     /* border: 1px solid black;  */
+     justify-content: space-around;
+     width: 70px;
+     align-items: center;
+}
+.Status_profile
+{
+    display: flex; 
+}
+.select_options
+{
+    width: 100%;
+    padding: 10px;
+}
+
+.profile_name_select
+{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap; 
+}
+.profile_name_select select
+{
+    width:100px;
+}
+.Leave_status
+{
+    padding: 10px;
+}
+@media all and (max-width:1130px)
+{
+    .Profile_box
+{
+    /* display: flex; */
+    justify-content: center;
+}
+.Profile_inputs
+{
+    width: 70%;
+}
+}
+@media all and (max-width:500px)
+{
+    .Profile_container
+    {
+        padding-top: 50px;
+    }
+    .profile_name_input input
+{
+    width: 100%;
+}
+.editbutton button
+{
+    
+    height: 40px;
+    width: 150px;
+    margin-right: 10px;
+}
+}

@@ -1,0 +1,483 @@
+.Main_container {
+  margin-bottom: 10px;
+}
+.Nav_cntainer {
+  display: flex;
+  /* border: 1px solid black; */
+  min-height: 70px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0px 50px;
+
+  /* min-height: 100vh; */
+}
+.Nav_cntainer img {
+  width: 110px;
+  height: 80px;
+}
+.Nav_middle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border: 1px solid black; */
+  width: 50%;
+  height: 100%;
+}
+.Nav_right {
+  display: flex;
+  /* border: 1px solid black; */
+  height: max-content;
+  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
+  /* width: 25%; */
+  flex-wrap: wrap;
+}
+.Nav_right button {
+  height: 30px;
+  color: #787887;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 13px;
+}
+.names {
+  line-height: 2px;
+}
+.names p {
+  font-weight: 700;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.names small {
+  font-size: 12px;
+}
+.Nav2 {
+  display: flex;
+  padding-left: 8%;
+  padding-right: 8%;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* border: 1px solid black; */
+  margin-left: -70px;
+}
+#input_1 {
+  outline: none;
+  /* border: 5px; */
+}
+
+.Nav_inputs {
+  /* position: relative; */
+  width: 70%;
+  display: flex;
+  min-height: 40px;
+  /* border: 1px solid black; */
+}
+.Nav_input_search {
+  /* border: 1px solid black; */
+  width: 100%;
+}
+.City_Inputcancel {
+  position: absolute;
+  right: 0;
+}
+.Nav_input_search input {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  padding: 6px 20px 5px 30px;
+  font-size: 15px;
+  outline: none;
+}
+
+.Nav2_text {
+  color: grey;
+  height: 40px;
+  /* border: 1px solid black; */
+  height: 100%;
+  padding-top: 10px;
+  justify-content: start;
+  display: flex;
+  /* width: 20%; */
+  flex-direction: column;
+}
+.prime {
+  color: #5d20ad;
+  font-size: 15px;
+  font-weight: 500;
+  /* display: none; */
+}
+.Nav2_text span {
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+}
+.Nav2_text p {
+  font-size: 15px;
+  width: 100%;
+  height: 100%;
+}
+.icons {
+  margin-left: 0px;
+  position: absolute;
+}
+.Nav3 {
+  color: #fff;
+  margin-top: 20px;
+  background-color: #28328c;
+  display: flex;
+  font-size: 14px;
+  /* justify-content: center; */
+  align-items: center;
+  min-height: 48.2px;
+  /* padding-right: 40%; */
+  padding-left: 10%;
+  flex-wrap: wrap;
+}
+.main_Nav3 {
+  display: flex;
+  margin-left: -110px;
+  /* border: 1px solid white; */
+  width: 70%;
+  flex-wrap: wrap;
+  position: relative;
+  /* padding-left: -10%; */
+  justify-content: space-around;
+}
+.dropdowns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  width: 10rem;
+  padding: 4px 8px;
+  height: 28px;
+  background-color: #434ea2;
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: start;
+  /* border: 1px solid black; */
+}
+.checkbox3 {
+  background-color: #434ea2;
+  width: 10rem;
+  padding: 4px 8px;
+  height: 28px;
+}
+.first_drop {
+  /* border: 1px solid black; */
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  right: 155px;
+}
+.first_drop li {
+  list-style: none;
+  height: 30px;
+  font-size: 18px;
+  border: 1px solid gray;
+  text-align: center;
+}
+.first_drop li:hover {
+  background-color: lightgrey;
+  /* color: darkgray; */
+}
+#city_input {
+  position: relative;
+}
+#hospital_input {
+  position: relative;
+}
+.City_Inputcancel {
+  position: absolute;
+  right: 2%;
+  top: 10px;
+}
+.Hospital_Inputcancel {
+  position: absolute;
+  right: 2%;
+  top: 10px;
+}
+.icon_city {
+  /* border: 1px solid black; */
+  height: 20px;
+  width: 30px;
+  top: 10px;
+  left: 0;
+  position: absolute;
+}
+.icon_spec {
+  height: 20px;
+  width: 30px;
+  left: 0%;
+  top: 10px;
+  position: absolute;
+}
+.Menudrop {
+  display: none;
+}
+.Nav_input_search_list {
+  font-size: 20px;
+  list-style: none;
+  padding-left: 30px;
+  max-height: 300px;
+  overflow-y: scroll;
+  /* border: 1px solid black; */
+}
+.Nav_input_search_list li
+{
+  border-bottom: 1px solid grey;
+  height: 35px;
+}
+.Profile_dropdown {
+  position: relative;
+}
+.profile_list {
+  position: absolute;
+  top: 8%;
+  right: 130px;
+  /* border: 1px solid black; */
+  width: max-content;
+  height: 200px;
+  transition-delay: 1s;
+  transition: height 5s ease-in-out;
+  background-color: white;
+  z-index: 1;
+}
+.profile_list li {
+  list-style: none;
+  padding: 10px;
+  padding-left: 20px;
+  font-size: 18px;
+  cursor: pointer 
+}
+.profile_list li:hover
+{
+  background-color: grey;
+  color: white;
+}
+#nav3_drop_1 {
+  position: relative;
+}
+.nav3_dropdown_1 {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 170px;
+  right: 10%;
+  top: 120%;
+  z-index: 1;
+}
+.nav3_dropdown_1 li {
+  border-bottom: 1px solid grey;
+  height: 30px;
+  list-style: none;
+  padding: 4px 15px;
+  font-size: 14px;
+}
+#nav3_relevance {
+  position: relative;
+}
+
+.nav3_dropdown_relevance {
+  position: absolute;
+  background-color: white;
+  color: black;
+  width: 170px;
+  right: 10%;
+  top: 120%;
+  z-index: 1;
+}
+.nav3_dropdown_relevance li {
+  border-bottom: 1px solid grey;
+  height: 30px;
+  list-style: none;
+  padding: 4px 15px;
+  font-size: 14px;
+}
+/* .checkbox2 {
+  position: relative;
+} */
+.nav3_allfilter {
+  position: absolute;
+  background-color: #28328c;
+  width: 100%;
+  top: 110%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid black; */
+  z-index: 1;
+  left: 0%;
+}
+.nav3_gender {
+  margin-right: 3rem;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.nav3_gender_inputs {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* background-color: black; */
+}
+.nav3_gender_inputs input {
+  margin-right: 10px;
+}
+#alldoctors
+{
+  display: none;
+}
+
+@media all and (max-width: 1150px) {
+  .Nav_middle {
+    display: none;
+  }
+  #alldoctors{
+    display: block;
+    margin: 10px;
+    margin-top: 20px;
+  }
+  .Menudrop {
+    display: block;
+    /* position: absolute;
+    top: "1000px"; */
+  }
+  .Menudrop_icon {
+    position: absolute;
+    top: 200px;
+    z-index: 1;
+  }
+}
+@media all and (max-width: 1100px) {
+  .main_Nav3 {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid white; */
+    justify-content: space-around;
+  }
+  .Nav3 {
+    display: flex;
+    /* padding-left: 10%; */
+    flex-wrap: wrap;
+  }
+}
+@media all and (max-width: 900px) {
+  .Nav2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .Nav_inputs {
+    margin-left: 10px;
+  }
+  .main_Nav3 {
+    display: flex;
+    width: 100%;
+    /* border: 1px solid white; */
+    justify-content: space-around;
+  }
+  .Nav3 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+  }
+}
+.clear_filter
+{
+  /* display: none; */
+  background-color: #434ea2;
+  color: white;
+  border: none;
+  margin: 10px;
+}
+
+@media all and (max-width: 600px) {
+  .clear_filter_div
+  {
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+  }
+  .profile_list {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    /* border: 1px solid black; */
+    width: 180px;
+  }
+  .Nav2 {
+    display: flex;
+    padding-left: 50px;
+  }
+ .city_icon
+ {
+   margin-right: 10px;
+ }
+ .citylist
+ {
+   display: flex;
+   /* justify-content: space-around; */
+ }
+  .Nav_inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-left: 40px;
+  }
+  .Nav_inputs input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .Nav2_text {
+    /* border: 1px solid black; */
+    width: 60%;
+  }
+  .main_Nav3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* border: 1px solid white; */
+  }
+  .Nav3 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+  }
+  .dropdowns {
+    /* display: none; */
+    text-align: center;
+    width: 100%;
+  }
+  .checkbox {
+    margin-left: 55px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  #dropdown4 {
+    /* display: none; */
+    display: flex;
+    /* border: 1px solid white; */
+    width: 100%;
+  }
+  .checkbox3 {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
