@@ -4,8 +4,8 @@ import "./confirmappoint.css";
 import Loginpage from "../Registerpage/Loginpage";
 import Smallnav from "./Smallnav";
 import Dateselector from "../Doctorlist/Dateselector";
-const docdata = "http://localhost:1111/doctors/docdata";
-const addappintment = "http://localhost:1111/user/addappointment";
+const docdata = "/doctors/docdata";
+const addappintment = "/user/addappointment";
 class Confirmappointment extends Component {
   constructor() {
     super();

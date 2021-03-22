@@ -6,8 +6,8 @@ import { GoVerified } from "react-icons/go";
 import "./Navbar.css";
 import axios from "axios";
 import { withRouter } from "react-router";
-const allcitiesurl = "http://localhost:1111/city/all";
-const specialisationurl = "http://localhost:1111/city/special";
+const allcitiesurl = "/city/all";
+const specialisationurl = "/city/special";
 class Nav2 extends Component {
   constructor() {
     super();
@@ -98,6 +98,12 @@ class Nav2 extends Component {
       hospital_inputvalue2: hospital,
     });
   };
+  routeset = () => {
+    const path = this.props.location.pathname;
+    if (path === "/") {
+      this.props.history.push("/doctorlist");
+    }
+  };
   render() {
     // console.log(this.state.City_inputvalue2);
     return (
@@ -105,9 +111,11 @@ class Nav2 extends Component {
         <div className="Nav_inputs">
           <div className="Nav_input_search" id="city_input">
             <input
+              className="city_input"
               placeholder="Enter city name"
               onChange={this.city_changehandler}
               value={this.state.City_inputvalue1}
+              onClick={this.routeset}
             />
             <IoLocationOutline className="icon_city" />
             {this.state.cities_list && (

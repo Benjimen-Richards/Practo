@@ -4,8 +4,6 @@ import "./Navbar.css";
 import { BiChevronDown } from "react-icons/bi";
 import { Link, withRouter } from "react-router-dom";
 
-import Nav2 from "./Nav2";
-
 class Navbar extends Component {
   constructor() {
     super();

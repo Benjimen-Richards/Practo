@@ -1,5 +1,1 @@
-[ {"specilization":"Gynecologist"}
-, {"specilization":"Dermatologist"}
-, {"specilization":"Homoeopath"},
- {"specilization":"Ayurveda"},
-{"specialization":"Dentist"}]
+  // "proxy":"https://afternoon-plateau-11729.herokuapp.com/",

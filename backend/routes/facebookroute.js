@@ -1,45 +1,48 @@
-const express=require('express')
-const facebookroute = express.Router()
-const User =require('../mongomodals/Doctormodal')
-const passport = require('passport')
-const FacebookStrategy = require('passport-facebook').Strategy
-let userprofile =''
+const express = require("express");
+const facebookroute = express.Router();
+const User = require("../mongomodals/Doctormodal");
+const passport = require("passport");
+const FacebookStrategy = require("passport-facebook").Strategy;
+let userprofile = "";
+const session = require("express-session");
+const { deleteOne } = require("../mongomodals/Doctormodal");
+facebookroute.use(session({ secret: "benjimen" }));
+facebookroute.use(passport.initialize());
+facebookroute.use(passport.session());
+passport.serializeUser((user, cb) => cb(null, user));
+passport.deserializeUser((user, cb) => cb(null, user));
+const callbackurl = "http://localhost:1111/facebook/auth/facebook/callback";
+facebookroute.get("/profile", (req, res) => {
+  res.send(userprofile);
+  userprofile = "";
+});
 
-const session=require('express-session')
-const { deleteOne } = require('../mongomodals/Doctormodal')
-facebookroute.use(session({secret:"benjimen"}))
-facebookroute.use(passport.initialize())
-facebookroute.use(passport.session())
-passport.serializeUser((user, cb) => cb(null, user))
-passport.deserializeUser((user, cb) => cb(null, user))
+passport.use(
+  new FacebookStrategy(
+    {
+      clientID: "3037414573169871",
+      clientSecret: "fb7128745d26d749642c1268670520b2",
+      callbackURL: callbackurl,
+      profileFields: ["name", "id", "email"],
+    },
+    function (accessToken, refreshToken, profile, cb) {
+      userprofile = profile;
+      return cb(null, profile);
+    }
+  )
+);
 
-facebookroute.get('/profile',(req,res)=>
-{
-    res.send(userprofile)
-})
+facebookroute.get(
+  "/auth/facebook",
+  passport.authenticate("facebook", { scope: "email" })
+);
 
+facebookroute.get(
+  "/auth/facebook/callback",
+  passport.authenticate("facebook", {
+    successRedirect: "https://rocky-chamber-59030.herokuapp.com/authpage/login",
+    failureRedirect: "http://localhost:3000/authpage/login",
+  })
+);
 
-passport.use(new FacebookStrategy({
-    clientID: '443314923550424',
-    clientSecret: '33480d45b1dc8305c86dc3d4b60d036f',
-    callbackURL: "http://localhost:1111/facebook/auth/facebook/callback",
-    // profileFields:["name","id"]
-},
-  function(accessToken, refreshToken, profile, cb) {
-    userprofile=profile
-    return cb(null,profile)
-  }
-));
-  
-facebookroute.get('/auth/facebook',
-  passport.authenticate('facebook'));
-
-  facebookroute.get('/auth/facebook/callback',
-  passport.authenticate('facebook', {
-      successRedirect:'http://localhost:3000',
-      // successRedirect:'/facebook/profile',
-      failureRedirect:'/error'
-  }))
-
-
-module.exports=facebookroute
+module.exports = facebookroute;

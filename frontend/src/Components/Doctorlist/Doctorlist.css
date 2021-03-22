@@ -113,7 +113,7 @@
 .doctor_card_header {
   display: flex;
   width: 100%;
-  /* border: 1px solid black */
+  /* border: 1px solid black; */
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -153,11 +153,9 @@
 @media all and (max-width: 600px) {
   .doctorimg
   {
-    margin-right: 0px;
+    margin-left: 30px; 
   }
-  .Doctor_card {
-    flex-direction: column;
-  }
+
   .Doctorlist_main_container {
     /* border: 1px solid black; */
     width: 100%;
@@ -167,31 +165,60 @@
     width: 100%;
   }
   .doctor_card_header {
-    display: none;
+    display: flex;
     flex-wrap: wrap;
+    /* border: 1px solid black; */
+    padding: 10px;
+    width: 100%;
+    font-size: 19px;
+    text-align: center;
+
+  }
+  .doctor_card_header span
+  {
+    font-size: 22px;
   }
   .Doctor_card {
-    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
     width: 100%;
+    /* border: 1px solid black; */
   }
   .Doctor_card_info {
-    text-align: center;
-    /* width: 100%; */
-    margin-left: 10%;
+    /* text-align: center; */
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0%;
+    font-size: 18px;
   }
+ 
 }
 @media all and (width: 720px) {
   .doctor_card_header {
     margin-left: 10%;
+    /* border: 1px solid black; */
   }
   .Doctor_card {
     display: flex;
+    margin-left: 0%;
+    width: 100%;
     width: 35rem;
   }
+  .Doctorlist_container
+  {
+    /* border: 1px solid black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+
 }
 @media all and (max-width: 1150px) {
   .doctor_rightside {
@@ -199,7 +226,7 @@
   }
   .Doctorlist_main_container {
     justify-content: center;
-    /* border: 1px solid black; */
+    
   }
   .doctorimg
   {

@@ -4,6 +4,7 @@
     /* border: 1px solid black; */
     width: 35%;
     display: flex;
+
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -30,7 +31,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-
 
 }
 .Appoint_container2
@@ -73,5 +73,18 @@
     {
     /* border: 1px solid black; */
     min-height:400px;
+    }
+    .appoints_multiple
+    {
+        display: flex;
+    /* border: 1px solid black; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    }
+    .Appoint_container
+    {
+        width: 100%;
     }
 }

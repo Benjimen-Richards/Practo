@@ -10,10 +10,13 @@ import Navbar from "../Navbar/Navbar";
 import Nav2 from "../Navbar/Nav2";
 const Homepage = () => {
   sessionStorage.setItem("cityname", "All cities ");
+  const setroute = (path) => {
+    console.log(path);
+  };
   return (
     <div className="Home_container">
       <Navbar />
-      <Nav2 />
+      <Nav2 route={(path) => setroute(path)} />
       <Doctor />
       <Find />
       <Speciality />

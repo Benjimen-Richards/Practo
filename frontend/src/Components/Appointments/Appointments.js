@@ -6,7 +6,7 @@ import Appointments1 from "./Appointments1";
 import { Route } from "react-router";
 import Profilepage from "./Profilepage";
 import { Link } from "react-router-dom";
-const allusers = "http://localhost:1111/user";
+const allusers = "/user";
 class Appointments extends Component {
   constructor() {
     super();

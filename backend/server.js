@@ -10,6 +10,7 @@ const Doctorroute = require("./routes/DoctorRoute");
 const facebookroute = require("./routes/facebookroute");
 const Userroute = require("./routes/Userroute");
 const Cityroute = require("./routes/Cityroute");
+const multerupload = require("./routes/multerupload");
 require("./Database/mongoose");
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
@@ -20,17 +21,18 @@ app.get("/profile", (req, res) => {
 app.get("/error", (req, res) => {
   res.send("not valid");
 });
-
-app.use("/uploads", express.static("uploads"));
+// console.log("pathserver", path.join(__dirname, "../uploads"));
+app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 app.use("/doctors", Doctorroute);
 app.use("/user", Userroute);
 app.use("/facebook", facebookroute);
 app.use("/city", Cityroute);
-// console.log();
+app.use("/multer", multerupload);
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
   });
 } else {
   app.get("/", (req, res) => {

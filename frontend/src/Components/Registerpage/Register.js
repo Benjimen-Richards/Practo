@@ -2,7 +2,7 @@ import axios from "axios";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
-const registerurl = "http://localhost:1111/doctors/register";
+const registerurl = " /doctors/register";
 class Register extends Component {
   constructor() {
     super();

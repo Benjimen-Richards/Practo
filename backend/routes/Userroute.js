@@ -3,29 +3,7 @@ const User = require("../mongomodals/Usermodal");
 const Userroute = express.Router();
 const doctor = require("../mongomodals/Doctormodal");
 const mongoose = require("mongoose");
-const multer = require("multer");
 const { ObjectID } = require("bson");
-const path = require("path");
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, "./uploads/");
-  },
-  filename: function (req, file, cb) {
-    cb(null, file.originalname);
-  },
-});
-const filetype = (req, file, cb) => {
-  if (file.mimetype === "image/jpeg" || file.mimetype === "image/PNG") {
-    cb(null, true);
-  } else {
-    cb(null, false);
-  }
-};
-const upload = multer({
-  storage: storage,
-  limits: 1024 * 1024 * 5,
-  fileFilter: filetype,
-});
 
 Userroute.put("/addappointment/:id", async (req, res) => {
   // res.send(req.body);
@@ -107,10 +85,6 @@ Userroute.put("/delete/:id", async (req, res) => {
   doctor.findById(userid).then((r) => res.send(r));
 });
 
-Userroute.post("/file", upload.single("image"), (req, res, next) => {
-  res.send(`${req.file.path}`);
-});
-
 Userroute.put("/editprofile/:id", async (req, res) => {
   const data = { ...req.body };
 
@@ -128,5 +102,20 @@ Userroute.put("/editprofile/:id", async (req, res) => {
   });
   doctor.findById(req.params.id).then((r) => res.send(r));
 });
+Userroute.post("/verify", (req, res) => {
+  doctor.findOne({ email: req.body.name }).then((r) => {
+    if (r) {
+      res.send({ msg: "yes", data: r });
+    } else {
+      res.send({ msg: "no", data: "" });
+    }
+  });
+  // console.log(req.body);
+});
 
+Userroute.put("/edit", (req, res) => {
+  doctor
+    .updateMany({ experience: "10+" }, { experience: 10 })
+    .then((r) => res.send(r));
+});
 module.exports = Userroute;

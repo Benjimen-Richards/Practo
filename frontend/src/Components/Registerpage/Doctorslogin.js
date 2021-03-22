@@ -2,9 +2,9 @@ import axios from "axios";
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Register.css";
-const registerurl = "http://localhost:1111/doctors/register";
-const allcities = "http://localhost:1111/city/all";
-const specialisationurl = "http://localhost:1111/city/special";
+const registerurl = "doctors/register";
+const allcities = "/city/all";
+const specialisationurl = "/city/special";
 class Register extends Component {
   constructor() {
     super();
@@ -135,10 +135,10 @@ class Register extends Component {
             <option disabled selected>
               set experience
             </option>
-            <option value="1+">1+</option>
-            <option value="5+">5+</option>
-            <option value="10+">10+</option>
-            <option value="15+">15+</option>
+            <option value="1">1+</option>
+            <option value="5">5+</option>
+            <option value="10">10+</option>
+            <option value="15">15+</option>
           </select>
         </div>
         <div className="create_password">

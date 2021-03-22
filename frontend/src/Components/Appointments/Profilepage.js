@@ -3,9 +3,9 @@ import React, { Component } from "react";
 import "./Profilepage.css";
 const userurl = "/user";
 const editprofile = "/user/editprofile";
-const fileurl = "/user/file";
-const commonurl = "http://localhost:1111";
+const fileurl = "/multer/file";
 const allcities = "/city/all";
+const commonurl = "http://localhost:1111/";
 const specialisationurl = "/city/special";
 class Profilepage extends Component {
   constructor() {
@@ -33,9 +33,9 @@ class Profilepage extends Component {
     this.setState({ filedata: file });
     const formdata = new FormData();
     formdata.append("image", file);
-    axios.post(fileurl, formdata).then((r) => {
-      this.setState({ profileimg: `${commonurl}/${r.data}` });
-      // console.log(`${commonurl}/${r.data}`);
+    axios.post("/multer/file", formdata).then((r) => {
+      this.setState({ profileimg: `${commonurl}${r.data}` });
+      // console.log(`${commonurl}${r.data}`);
     });
     sessionStorage.setItem("userimage", this.state.profileimg);
   };
@@ -207,10 +207,10 @@ class Profilepage extends Component {
                       <option disabled selected>
                         Select your experience
                       </option>
-                      <option value="+1">+1</option>
-                      <option value="+5">+5</option>
-                      <option value="+10">+10</option>
-                      <option value="+15">+15</option>
+                      <option value="1">1+</option>
+                      <option value="5">5+</option>
+                      <option value="10">10+</option>
+                      <option value="15">15+</option>
                     </select>
                   </div>
                 </div>
@@ -252,7 +252,7 @@ class Profilepage extends Component {
   }
   componentDidMount() {
     const id = sessionStorage.getItem("userid");
-    axios.get(`${userurl}/${id}`).then((r) =>
+    axios.get(`${userurl}/${id}`).then((r) => {
       this.setState({
         userid: id,
         user: r.data,
@@ -266,8 +266,8 @@ class Profilepage extends Component {
         registered: r.data.registered,
         profileimg: r.data.profileimg,
         specialisation: r.data.specialisation,
-      })
-    );
+      });
+    });
     axios.get(allcities).then((r) => this.setState({ cities: r.data }));
     axios
       .get(specialisationurl)

@@ -3,9 +3,8 @@ import "./Doctorlist.css";
 import axios from "axios";
 import { withRouter } from "react-router";
 import { GoVerified } from "react-icons/go";
-const disable = "http://localhost:1111/user/disable";
-const likeurl = "http://localhost:1111/doctors/editlike/";
-const bookingvisible = "http://localhost:1111/doctors/doctorbooking/";
+const disable = "/user/disable";
+
 class Doctorlist extends Component {
   constructor(props) {
     super(props);
@@ -44,7 +43,7 @@ class Doctorlist extends Component {
                 <span>{doctor.specialisation}</span>
               </div>
               <div className="Doctor_experience" id="Doctor_specilisation_text">
-                <span>{doctor.experience} years of experience overall</span>
+                <span>{doctor.experience}+ years of experience overall</span>
               </div>
               <div
                 className="Doctor_hospital_name"
@@ -151,7 +150,6 @@ class Doctorlist extends Component {
   }
   componentDidMount() {
     const windowheight = window.innerHeight;
-
     if (windowheight > 650) {
       window.addEventListener("scroll", () => {
         if (window.scrollY > 200) {

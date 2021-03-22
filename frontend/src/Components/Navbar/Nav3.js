@@ -101,34 +101,42 @@ const Nav3 = (props) => {
                 </div>
               </div>
             </div>
-          </div>
-          <div className="dropdowns" id="dropdown4">
-            <label style={{ marginRight: "10px" }}>Sort by </label>
-            <div
-              className="checkbox"
-              id="nav3_relevance"
-              onClick={listdisplay_2handler}
-            >
-              <label>Relevance </label>
-              {!listdisplay_2arrow && <BiChevronDown />}
-              <BsArrowUpShort style={{ display: listdisplay_2 }} />
-              <div
-                className="nav3_dropdown_relevance"
-                style={{ display: listdisplay_2 }}
-              >
-                <li onClick={() => props.relevance("high")}>
-                  Price high to low
-                </li>
-                <li onClick={() => props.relevance("Low")}>
-                  Price low to high
-                </li>
-                <li onClick={() => props.relevance("experience")}>
-                  Years of experience
-                </li>
+
+            <div className="dropdowns" id="dropdown4">
+              <div className="sort_container">
+                <label className="sort_label" style={{ marginRight: "10px" }}>
+                  Sort by{" "}
+                </label>
+                <div
+                  className="checkbox"
+                  id="nav3_relevance"
+                  onClick={listdisplay_2handler}
+                >
+                  <label>Relevance </label>
+                  {!listdisplay_2arrow && <BiChevronDown />}
+                  <BsArrowUpShort style={{ display: listdisplay_2 }} />
+                  <div
+                    className="nav3_dropdown_relevance"
+                    style={{ display: listdisplay_2 }}
+                  >
+                    <li onClick={() => props.relevance("high")}>
+                      Price high to low
+                    </li>
+                    <li onClick={() => props.relevance("Low")}>
+                      Price low to high
+                    </li>
+                    <li onClick={() => props.relevance("experience")}>
+                      less Years of experience
+                    </li>
+                    <li onClick={() => props.relevance("experience2")}>
+                      Most Years of experience
+                    </li>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="clear_filter_div">
+            <div className="clear_filter_div"></div>
+
             <button className="clear_filter" onClick={() => props.default()}>
               Clear filters
             </button>

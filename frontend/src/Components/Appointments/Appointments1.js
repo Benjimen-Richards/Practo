@@ -2,8 +2,8 @@ import axios from "axios";
 import { Component } from "react";
 import "./Appoint1.css";
 import Doctorappointments from "./Doctorsappointment";
-const userurl = "http://localhost:1111/doctors/docdata/";
-const deleteurl = "http://localhost:1111/user/delete/";
+const userurl = "/doctors/docdata/";
+const deleteurl = "/user/delete/";
 class Appointments1 extends Component {
   constructor() {
     super();
@@ -202,7 +202,7 @@ class Appointments1 extends Component {
   };
 
   render() {
-    console.log("data", this.state.appointments);
+    // console.log("data", this.state.appointments);
     return (
       <div className="bottom_right">
         {this.state.patient && this.renderuserdata(this.state.appointments)}
