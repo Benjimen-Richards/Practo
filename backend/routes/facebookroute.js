@@ -11,7 +11,8 @@ facebookroute.use(passport.initialize());
 facebookroute.use(passport.session());
 passport.serializeUser((user, cb) => cb(null, user));
 passport.deserializeUser((user, cb) => cb(null, user));
-const callbackurl = "http://localhost:1111/facebook/auth/facebook/callback";
+const callbackurl =
+  "https://fast-tor-68755.herokuapp.com/facebook/auth/facebook/callback";
 facebookroute.get("/profile", (req, res) => {
   res.send(userprofile);
   userprofile = "";
@@ -40,8 +41,8 @@ facebookroute.get(
 facebookroute.get(
   "/auth/facebook/callback",
   passport.authenticate("facebook", {
-    successRedirect: "https://rocky-chamber-59030.herokuapp.com/authpage/login",
-    failureRedirect: "http://localhost:3000/authpage/login",
+    successRedirect: "https://fast-tor-68755.herokuapp.com/authpage/login",
+    failureRedirect: "https://fast-tor-68755.herokuapp.com/authpage/register",
   })
 );
 

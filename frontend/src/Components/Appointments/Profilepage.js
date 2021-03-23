@@ -3,9 +3,8 @@ import React, { Component } from "react";
 import "./Profilepage.css";
 const userurl = "/user";
 const editprofile = "/user/editprofile";
-const fileurl = "/multer/file";
 const allcities = "/city/all";
-const commonurl = "http://localhost:1111/";
+const commonurl = "https://fast-tor-68755.herokuapp.com/";
 const specialisationurl = "/city/special";
 class Profilepage extends Component {
   constructor() {
@@ -35,7 +34,7 @@ class Profilepage extends Component {
     formdata.append("image", file);
     axios.post("/multer/file", formdata).then((r) => {
       this.setState({ profileimg: `${commonurl}${r.data}` });
-      // console.log(`${commonurl}${r.data}`);
+      console.log(`${commonurl}${r.data}`);
     });
     sessionStorage.setItem("userimage", this.state.profileimg);
   };
