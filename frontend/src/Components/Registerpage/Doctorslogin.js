@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css";
+import "./Css/Register.css";
 const registerurl = "doctors/register";
 const allcities = "/city/all";
 const specialisationurl = "/city/special";
@@ -99,6 +99,7 @@ class Register extends Component {
           <input
             placeholder="please enter Password"
             name="password"
+            type='password'
             value={this.state.password}
             onChange={this.changehandler}
           />

@@ -3,7 +3,7 @@ import { IoLocationOutline } from "react-icons/io5";
 import { MdCancel } from "react-icons/md";
 import { IoIosSearch } from "react-icons/io";
 import { GoVerified } from "react-icons/go";
-import "./Navbar.css";
+import "./Navbar.scss";
 import axios from "axios";
 import { withRouter } from "react-router";
 const allcitiesurl = "/city/all";

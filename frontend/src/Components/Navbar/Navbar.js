@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 
 import { BiChevronDown } from "react-icons/bi";
 import { Link, withRouter } from "react-router-dom";

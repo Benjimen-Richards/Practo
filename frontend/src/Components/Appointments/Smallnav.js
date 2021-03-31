@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-import "./confirmappoint.css";
+import "./Css/confirmappoint.css";
 import { BiChevronDown } from "react-icons/bi";
 
 class Smallnav extends Component {

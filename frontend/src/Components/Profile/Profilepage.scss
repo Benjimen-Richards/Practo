@@ -7,13 +7,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.Profile_img img
+    & img
 {
     width: 200px;
     height: 200px;
     border-radius: 50%;
 }
+}
+
 .Profile_container
 {
     width: 100%;
@@ -41,9 +42,8 @@
     /* border: 1px solid black; */
     width: 100%;
     display: flex;
-    justify-content:flex-end;   
-}
-.editbutton button
+    justify-content:flex-end;  
+    & button
 {
     color: white;
     background-color: #14bef0;
@@ -53,7 +53,9 @@
     border: none;
     border-radius: 10px;
     margin-right: 10%;
+} 
 }
+
 .Profile_inputs
 {
     /* border: 1px solid black; */
@@ -74,12 +76,13 @@
  justify-content: space-evenly;
  flex-direction: column;
  margin:10px;
-}
-.profile_name_input input
+ & input
 {
     width: 100%;
     padding: 10px;
 }
+}
+
 #leave
 {
      display: flex;

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 import { Link } from "react-router-dom";
-import "./Register.css";
+import "./Css/Register.css";
 const registerurl = " /doctors/register";
 class Register extends Component {
   constructor() {
@@ -68,6 +68,7 @@ class Register extends Component {
         <div className="create_password">
           <span>Create Password</span>
           <input
+          type='password'
             placeholder="Password"
             value={this.state.password}
             name="password"

@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Component } from "react";
-import "./Appoint1.css";
+import "./Css/Appoint1.css";
 const userurl = "/doctors/docdata/";
 const deleteurl = "/user/delete/";
 class Appointments1 extends Component {

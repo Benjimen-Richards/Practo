@@ -1,10 +1,10 @@
-import "./Appointment.css";
+import "./Css/Appointment.css";
 import { Component } from "react";
 import axios from "axios";
 import Smallnav from "./Smallnav";
 import Appointments1 from "./Appointments1";
 import { Route } from "react-router";
-import Profilepage from "./Profilepage";
+import Profile from "../Profile/Profilepage";
 import { Link } from "react-router-dom";
 const allusers = "/user";
 class Appointments extends Component {
@@ -58,7 +58,7 @@ class Appointments extends Component {
               path="/appointments/appointments"
               component={Appointments1}
             />
-            <Route path="/appointments/profile" component={Profilepage} />
+            <Route path="/appointments/profile" component={Profile} />
           </div>
         </div>
       </div>

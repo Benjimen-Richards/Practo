@@ -11,8 +11,7 @@ facebookroute.use(passport.initialize());
 facebookroute.use(passport.session());
 passport.serializeUser((user, cb) => cb(null, user));
 passport.deserializeUser((user, cb) => cb(null, user));
-const callbackurl =
-  "https://fast-tor-68755.herokuapp.com/facebook/auth/facebook/callback";
+const callbackurl = "http://localhost:1111/facebook/auth/facebook/callback";
 facebookroute.get("/profile", (req, res) => {
   res.send(userprofile);
   userprofile = "";
@@ -21,8 +20,8 @@ facebookroute.get("/profile", (req, res) => {
 passport.use(
   new FacebookStrategy(
     {
-      clientID: "3037414573169871",
-      clientSecret: "fb7128745d26d749642c1268670520b2",
+      clientID: "142828881081176",
+      clientSecret: "a07d900881db49a63480c47d5a1ecabc",
       callbackURL: callbackurl,
       profileFields: ["name", "id", "email"],
     },
@@ -41,8 +40,8 @@ facebookroute.get(
 facebookroute.get(
   "/auth/facebook/callback",
   passport.authenticate("facebook", {
-    successRedirect: "https://fast-tor-68755.herokuapp.com/authpage/login",
-    failureRedirect: "https://fast-tor-68755.herokuapp.com/authpage/register",
+    successRedirect: "http://localhost:3000/authpage/login",
+    failureRedirect: "http://localhost:3000/authpage/login",
   })
 );
 

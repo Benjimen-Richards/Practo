@@ -11,6 +11,7 @@ const facebookroute = require("./routes/facebookroute");
 const Userroute = require("./routes/Userroute");
 const Cityroute = require("./routes/Cityroute");
 const multerupload = require("./routes/multerupload");
+const mailroute = require("./routes/Mailroute");
 require("./Database/mongoose");
 app.use(parser.urlencoded({ extended: true }));
 app.use(parser.json());
@@ -28,6 +29,7 @@ app.use("/user", Userroute);
 app.use("/facebook", facebookroute);
 app.use("/city", Cityroute);
 app.use("/multer", multerupload);
+app.use('/mail',mailroute)
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../frontend/build")));

@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import "./Loginpage.css";
+import "./Css/Loginpage.css";
 import { AiFillFacebook } from "react-icons/ai";
 import axios from "axios";
 import { withRouter } from "react-router";
 const loginurl = "/doctors/login";
-// const commonurl =
-// "https://rocky-chamber-59030.herokuapp.com/facebook/auth/facebook/";
-// const commonurl = "/facebook/auth/facebook";
-const commonurl = "http://localhost:1111/facebook/auth/facebook";
+const facebookurl = "http://localhost:1111/facebook/auth/facebook";
+
 class Loginpage extends Component {
   constructor() {
     super();
@@ -23,8 +21,7 @@ class Loginpage extends Component {
   };
   facebookhandler = (e) => {
     e.preventDefault();
-    window.location.href = commonurl;
-    // console.log("clicked");
+    window.location.href = facebookurl;
   };
   submithandler = (e) => {
     e.preventDefault();
@@ -67,6 +64,9 @@ class Loginpage extends Component {
     }
     // console.log(this.state)
   };
+  passwordhandler = () => {
+    this.props.history.push("/forgetpassword");
+  };
   render() {
     return (
       <form className="Login_container" onSubmit={this.submithandler}>
@@ -85,6 +85,7 @@ class Loginpage extends Component {
         <div className="Login_password">
           <span>Password</span>
           <input
+            type="password"
             placeholder="Password"
             name="password"
             value={this.state.password}
@@ -99,7 +100,7 @@ class Loginpage extends Component {
             <input type="checkbox" />
             Remeber me for 30 days
           </div>
-          <span>Forget password?</span>
+          <span onClick={this.passwordhandler} style={{cursor:"pointer"}}>Forget password?</span>
         </div>
         <div className="Login_withphone">
           <input type="checkbox" />
@@ -133,10 +134,8 @@ class Loginpage extends Component {
               sessionStorage.setItem("userid", res.data.data._id);
               sessionStorage.setItem("userimage", res.data.data.profileimg);
               this.props.history.push("/");
-              // console.log(res.data.data);
             } else {
               this.props.history.push("/authpage/register");
-              // console.log(res.data.data);
             }
           });
       }

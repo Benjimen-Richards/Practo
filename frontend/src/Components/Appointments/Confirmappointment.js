@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { Component } from "react";
-import "./confirmappoint.css";
+import "./Css/confirmappoint.css";
 import Loginpage from "../Registerpage/Loginpage";
 import Smallnav from "./Smallnav";
 import Dateselector from "../Doctorlist/Dateselector";

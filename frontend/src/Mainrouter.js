@@ -6,7 +6,8 @@ import Appointments from "./Components/Appointments/Appointments";
 import Main_authpage from "./Components/Registerpage/Main_authpage";
 import Confirmappointment from "./Components/Appointments/Confirmappointment";
 import Doctormainpage from "./Components/Doctorlist/Doctormainpage";
-
+import Forgetpassword from './Components/Forgetpassword/Forgetpassword'
+import Setpassword from "./Components/Forgetpassword/Setpassword";
 const App = () => {
   return (
     <div>
@@ -16,6 +17,8 @@ const App = () => {
         <Route path="/appointments" component={Appointments} />
         <Route path="/authpage" component={Main_authpage} />
         <Route path="/confirmappointment/:id" component={Confirmappointment} />
+        <Route path="/forgetpassword" component={Forgetpassword} />
+        <Route path='/setpassword' component={Setpassword}/>
       </BrowserRouter>
     </div>
   );
