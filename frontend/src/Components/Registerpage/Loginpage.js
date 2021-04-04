@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Css/Loginpage.css";
 import { AiFillFacebook } from "react-icons/ai";
 import axios from "axios";
-import { withRouter } from "react-router";
+import { withRouter, Redirect } from "react-router";
 const loginurl = "/doctors/login";
 const facebookurl = "http://localhost:1111/facebook/auth/facebook";
 

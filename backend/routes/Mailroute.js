@@ -3,39 +3,39 @@ const mailroute = express.Router()
 const nodemailer = require("nodemailer")
 const doctor = require("../mongomodals/Doctormodal")
 let otp 
-console.log("user",process.env.user)
+// console.log("user",process.env.USER)
 const transporter = nodemailer.createTransport({
-    service:"gmail",
-    auth:{
-        user:process.env.user,
-        pass:process.env.PASSWORD
-    }
-})
+  service: "gmail",
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASSWORD,
+  },
+});
+mailroute.get("/getenvs", (req, res) => {
+  res.send({ name: process.env.USER, password: process.env.PASSWORD });
+});
 mailroute.post('/',(req,res)=>
 {
     const email = req.body.input
     doctor.findOne({email}).then(r=>
         {
-            if(r)
-            {
-                otp = Math.floor(Math.random() * (9999-999)) + 1;
-                let mailoptions = {
-                    from :process.env.USERNAME,
-                    to:r.email,
-                    subject:"Password change",
-                    text:`Hello ${r.fullname}!Your otp for password change is ${otp}`
+            if (r) {
+              otp = Math.floor(Math.random() * (9999 - 999)) + 1;
+              let mailoptions = {
+                from: process.env.USER,
+                to: r.email,
+                subject: "Password change",
+                text: `Hello ${r.fullname}!Your otp for password change is ${otp}`,
+              };
+              transporter.sendMail(mailoptions, (err, data) => {
+                if (err) {
+                  res.send(err);
+                } else {
+                  res.send(r._id);
                 }
-                transporter.sendMail(mailoptions,(err,data)=>
-                {
-                    if(err)
-                    {
-                        res.send(err)
-                    }
-                    else
-                    {
-                        res.send(r._id)
-                    }
-                })
+              });
+            } else {
+              res.send(false);
             }
 
         })
