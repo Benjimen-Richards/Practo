@@ -8,6 +8,7 @@ import Confirmappointment from "./Components/Appointments/Confirmappointment";
 import Doctormainpage from "./Components/Doctorlist/Doctormainpage";
 import Forgetpassword from './Components/Forgetpassword/Forgetpassword'
 import Setpassword from "./Components/Forgetpassword/Setpassword";
+import Nullpage from "./Components/Null/Nullpage";
 const App = () => {
   return (
     <div>
@@ -18,7 +19,8 @@ const App = () => {
         <Route path="/authpage" component={Main_authpage} />
         <Route path="/confirmappointment/:id" component={Confirmappointment} />
         <Route path="/forgetpassword" component={Forgetpassword} />
-        <Route path='/setpassword' component={Setpassword}/>
+        <Route path="/setpassword" component={Setpassword} />
+        <Route path="/null" component={Nullpage} />
       </BrowserRouter>
     </div>
   );

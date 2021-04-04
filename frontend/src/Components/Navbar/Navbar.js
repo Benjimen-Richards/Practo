@@ -51,16 +51,32 @@ class Navbar extends Component {
               </div>
             </Link>
             <div className="names">
-              <p>consult</p>
-              <small>Consult with top doctors</small>
+              <Link
+                to="/null"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <p>consult</p>
+                <small>Consult with top doctors</small>
+              </Link>
             </div>
             <div className="names">
-              <p>Pharmacy</p>
-              <small>Medicines & health products</small>
+              {" "}
+              <Link
+                to="/null"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <p>Pharmacy</p>
+                <small>Medicines & health products</small>
+              </Link>
             </div>
             <div className="names">
-              <p>Diagonstics</p>
-              <small>Book tests & checkups</small>
+              <Link
+                to="/null"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <p>Diagonstics</p>
+                <small>Book tests & checkups</small>
+              </Link>
             </div>
           </div>
           <div className="Nav_right">
@@ -73,12 +89,22 @@ class Navbar extends Component {
               </Link>
             </div>
             <div className="names">
-              <span>For providers</span>
-              <BiChevronDown />
+              <Link
+                to="/null"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <span>For providers</span>
+                <BiChevronDown />
+              </Link>
             </div>
             <div className="names">
-              <span>Security & help</span>
-              <BiChevronDown />
+              <Link
+                to="/null"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <span>Security & help</span>
+                <BiChevronDown />
+              </Link>
             </div>
             {!sessionStorage.getItem("username") && (
               <Link to="/authpage/login">

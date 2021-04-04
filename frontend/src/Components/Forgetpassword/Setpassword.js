@@ -1,3 +1,4 @@
+import { TextField } from "@material-ui/core";
 import axios from "axios";
 import React, { Component } from "react";
 import "./Setpassword.scss";
@@ -38,8 +39,9 @@ submithandler=()=>
     return (
       <div className="set_container">
         <span>Please enter Password</span>
-        <input placeholder="Enter Password" name='password' type='password' value={this.state.password} onChange={this.changehandler}/>
-        <input placeholder="Re-Enter Password" type='password' name='repassword' value={this.state.repassword} onChange={this.changehandler}/>
+        <TextField id="standard-basic"name='password' type='password' label="Password" value={this.state.password}onChange={this.changehandler}/>
+        <TextField id="standard-basic"name='repassword'  type='password' value={this.state.repassword} onChange={this.changehandler} label="Re.enter your password" />
+        
         <button className="btn btn-primary" onClick={this.submithandler}>APPLY CHANGES</button>
         {this.state.err && <h1>{this.state.err}</h1>}
       </div>
